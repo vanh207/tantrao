@@ -1,2 +1,1 @@
-# nhom4
 # khuditichtantrao
