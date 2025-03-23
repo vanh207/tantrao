@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông báo khi cuộn</title>
+    <style>
+        body {
+            height: 150vh; /* Tạo trang dài để cuộn */
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .modal button {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kéo xuống dưới cùng để xem thông báo!</h1>
+    
+    <div id="popup" class="modal">
+        <p>Bạn đã cuộn đến cuối trang. Bạn có muốn tiếp tục không?</p>
+        <button onclick="handleYes()">Có</button>
+        <button onclick="handleNo()">Không</button>
+    </div>
+    
+    <script>
+        window.addEventListener('scroll', function() {
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                document.getElementById('popup').style.display = 'block';
+            }
+        });
+        
+        function handleYes() {
+            window.location.href = 'https://example.com'; // Thay bằng link trang web mong muốn
+        }
+        
+        function handleNo() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký Tour Du lịch Tân Trào</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .c {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="c">
+        <h2>Đăng ký Tour Du lịch Tân Trào</h2>
+        <form id="tourForm">
+            <input type="text" id="name" placeholder="Họ và tên" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="tel" id="phone" placeholder="Số điện thoại" required>
+            <select id="tourOption" required>
+                <option value="">Chọn gói tour</option>
+                <option value="1-day">Tour 1 ngày</option>
+                <option value="2-day">Tour 2 ngày 1 đêm</option>
+                <option value="3-day">Tour 3 ngày 2 đêm</option>
+            </select>
+            <button type="submit">Đăng ký ngay</button>
+        </form>
+        <p id="message" style="color: green; margin-top: 10px;"></p>
+    </div>
+
+    <script>
+        document.getElementById('tourForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('message').innerText = 'Bạn đã đăng ký thành công!';
+            setTimeout(function() {
+                window.location.href = 'tdl.html'; 
+            }, 1000); 
+        });
+    </script>
+</body>
+</html>
