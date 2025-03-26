@@ -146,6 +146,42 @@
         width: 100%;
         border-collapse: collapse;
         }
+        /* Mobile: Cột dọc */
+@media (max-width: 768px) {
+    .c {
+        flex-direction: column;
+    }
+    .trai, .phai {
+        width: 100%;
+    }
+}
+
+/* Tablet: Cân đối giữa mobile & desktop */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .c {
+        flex-direction: row;
+    }
+    .trai {
+        width: 60%;
+    }
+    .phai {
+        width: 40%;
+    }
+}
+
+/* Desktop: Rộng hơn nhưng vẫn cân đối */
+@media (min-width: 1024px) {
+    .c {
+        flex-direction: row;
+    }
+    .trai {
+        width: 65%;
+    }
+    .phai {
+        width: 35%;
+    }
+}
+
     </style>
 </head>
 <body>
